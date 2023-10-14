@@ -1,7 +1,7 @@
 # Overview
 This is my attempt of creating a simple Mad Lib Application
 
-[Software Demo Video]
+[Software Demo Video] https://youtu.be/3vk3zJHde7A 
 
 # Development Environment
 
@@ -17,6 +17,7 @@ Used stack navigator library and react native libraries
 * [React Navigation](https://reactnavigation.org/docs/stack-navigator/)
 * [React Tutorial](https://react.dev/learn/start-a-new-react-project)
 * [Next.js](https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts)
+* chatgpt for debugging
 
 # Future Work
 
