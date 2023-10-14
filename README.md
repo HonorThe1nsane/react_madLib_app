@@ -7,3 +7,4 @@ https://reactnavigation.org/docs/stack-navigator/
 
 https://react.dev/learn/start-a-new-react-project
 
+https://nextjs.org/docs/app/building-your-application/routing/pages-and-layouts
