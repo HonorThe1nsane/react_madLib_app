@@ -1,20 +1,20 @@
 import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
-function HomeScreen({ navigation }) {
-    const handleGetStarted = () => {
+const GoToZoo = ({ navigation }) => {
+    const madLibZooStart = () => {
         navigation.navigate('PickMadLib'); // Navigate to the 'PickMadLib' screen
     };
 
     return (
         <View style={styles.container}>
-            <Text>Welcome to the MadLib craziness</Text>
-            <TouchableOpacity style={styles.button} onPress={handleGetStarted}>
-                <Text>Get Started Right Now</Text>
+            <Text>Welcome to the Zoo!</Text>
+            <TouchableOpacity style={styles.button} onPress={madLibZooStart}>
+                <Text>Start your MadLib</Text>
             </TouchableOpacity>
         </View>
     );
-}
+};
 
 const styles = StyleSheet.create({
     container: {
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default HomeScreen;
+export default GoToZoo;

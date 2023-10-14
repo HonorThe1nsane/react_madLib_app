@@ -1,9 +1,9 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const PickMadLib = () => {
+const PickMadLib = ({ navigation }) => {
     const handleButton1Press = () => {
-        // Handle the action for Button 1
+            navigation.navigate('GoToZoo'); // Navigate to the 'Zoo Mad Lib' screen
     };
 
     const handleButton2Press = () => {
@@ -17,7 +17,7 @@ const PickMadLib = () => {
                 <Text>Adventure at the zoo</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.button} onPress={handleButton2Press}>
-                <Text>Going</Text>
+                <Text>Going Camping</Text>
             </TouchableOpacity>
         </View>
     );
@@ -31,7 +31,8 @@ const styles = StyleSheet.create({
     },
     button: {
         marginTop: 10, // Adjust the spacing between buttons
-        backgroundColor: 'blue',
+        backgroundColor: 'grey',
+        backgroundOpacity: 1,
         padding: 10,
         borderRadius: 5,
     },

@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen'; // Import the HomeScreen component
 import PickMadLib from './prompt'; // Import the PickMadLib component
+import GoToZoo from './zooML';
 
 const Stack = createStackNavigator();
 
@@ -12,6 +13,7 @@ function App() {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="PickMadLib" component={PickMadLib} />
+        <Stack.Screen name="GoToZoo" component={GoToZoo} />
       </Stack.Navigator>
     </NavigationContainer>
   );
