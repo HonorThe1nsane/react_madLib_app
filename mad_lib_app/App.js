@@ -4,7 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen'; // Import the HomeScreen component
 import PickMadLib from './prompt'; // Import the PickMadLib component
 import GoToZoo from './zooML';
-
+import GoToCamp from './campML';
 const Stack = createStackNavigator();
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="PickMadLib" component={PickMadLib} />
         <Stack.Screen name="GoToZoo" component={GoToZoo} />
+        <Stack.Screen name="GoToCamp" component={GoToCamp} />
       </Stack.Navigator>
     </NavigationContainer>
   );

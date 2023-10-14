@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import MadLibData from './MadLib.json';
 
-const GoToZoo = () => {
-    const zooStory = MadLibData.madLibs[0].zoo_story;
+const GoToCamp = () => {
+    const zooStory = MadLibData.madLibs[0].camping_story_story;
     const prompts = MadLibData.madLibs[0].prompts;
 
     const [userInputs, setUserInputs] = useState({});
@@ -26,7 +26,7 @@ const GoToZoo = () => {
     };
 
     const generateStory = () => {
-        let finalStory = zooStory;
+        let finalStory = campStory;
         prompts.forEach((prompt) => {
             const regex = new RegExp(`\\(${prompt}\\)`, 'g');
             finalStory = finalStory.replace(regex, userInputs[prompt] || '');
@@ -64,4 +64,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default GoToZoo;
+export default GoToCamp;
