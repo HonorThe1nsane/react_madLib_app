@@ -1,17 +1,31 @@
-import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, StyleSheet } from 'react-native';
 
-const GoToZoo = ({ navigation }) => {
-    const madLibZooStart = () => {
-        navigation.navigate('PickMadLib'); // Navigate to the 'PickMadLib' screen
-    };
+const GoToZoo = () => {
+    const [fileContent, setFileContent] = useState('');
+
+    useEffect(() => {
+        // Replace 'zooMadLib.txt' with the path to your text file
+        fetch('./https://github.com/HonorThe1nsane/react_madLib_app/blob/main/mad_lib_app/zooMadLib.txt')
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch file');
+                }
+                return response.text();
+            })
+            .then((text) => {
+                setFileContent(text);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }, []);
 
     return (
         <View style={styles.container}>
             <Text>Welcome to the Zoo!</Text>
-            <TouchableOpacity style={styles.button} onPress={madLibZooStart}>
-                <Text>Start your MadLib</Text>
-            </TouchableOpacity>
+            <Text>File Content:</Text>
+            <Text>{fileContent}</Text>
         </View>
     );
 };
@@ -21,12 +35,6 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-    },
-    button: {
-        marginTop: 20,
-        backgroundColor: 'grey',
-        padding: 10,
-        borderRadius: 5,
     },
 });
 
