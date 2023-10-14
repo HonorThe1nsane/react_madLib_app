@@ -1,37 +1,20 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
-import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './HomeScreen'; // Import the HomeScreen component
+import PickMadLib from './prompt'; // Import the PickMadLib component
 
-export default function App() {
-  const navigation = useNavigation();
+const Stack = createStackNavigator();
 
-  const handleGetStarted = () => {
-    // Navigate to the new screen when the button is pressed
-    navigation.navigate('prompt'); //Goes to the next screen prompting the user to select a madlib
-  };
-
+function App() {
   return (
-    <View style={styles.container}>
-      <Text>Welcome to the MadLib craziness</Text>
-      <TouchableOpacity onPress={handleGetStarted} style={styles.button}>
-        <Text>Get Started</Text>
-      </TouchableOpacity>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="PickMadLib" component={PickMadLib} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  button: {
-    marginTop: 20,
-    backgroundColor: 'blue',
-    padding: 10,
-    borderRadius: 5,
-  },
-});
+export default App;
