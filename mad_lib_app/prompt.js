@@ -7,8 +7,8 @@ const PickMadLib = ({ navigation }) => {
     };
 
     const handleButton2Press = () => {
-        // Handle the action for Button 2
-    };
+            navigation.navigate('GoToCamp');
+        };
 
     return (
         <View style={styles.container}>

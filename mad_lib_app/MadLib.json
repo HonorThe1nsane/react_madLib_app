@@ -1,7 +1,7 @@
 {
     "madLibs": [
         {
-            "zoo_story": "Today I went to the zoo. I saw a (Noun Animal) jumping up and down in its tree. He (Verb Past Tense) quickly through the large tunnel that led to its huge (Noun). I got some peanuts and passed them through the cage to a gigantic gray (Noun) towering above my head. Feeding that animal made me hungry. I went to get a (Adjective) scoop of ice cream. It filled my stomach. Afterwards I had to (Verb) quickly to catch our bus. When I got home I (Verb Past Tense) to my mom for a (Adjective) day at the zoo.",
+            "zoo_story": "Today I went to the zoo. I saw a (Noun Animal) jumping up and down in its tree. He (Verb Past Tense) quickly through the large tunnel that led to its huge (Noun). I got some peanuts and passed them through the cage to a gigantic gray (Noun) towering above my head. Feeding that Animal made me hungry. I went to get a (Adjective) scoop of ice cream. It filled my stomach. Afterwards I had to (Verb) quickly to catch our bus. When I got home I (Verb Past Tense) to my mom for a (Adjective) day at the zoo.",
             "prompts": [
                 "Noun Animal",
                 "Verb Past Tense",
@@ -11,8 +11,19 @@
             ]
         },
         {
-            "camping_story": "",
-            "prompts": []
+            "camping_story": "This weekend I am going camping with (Proper Noun). I packed my lantern, sleeping bag, and (Noun). I am so (Adjective) to (Verb) in a tent. I am (Adjective) we might see a (Animal), they are kind of dangerous. We are going to hike, fish, and (Verb). I have heard that the (Color) lake is great for (Verb). Then we will (Adverb) hike through the forest for (Number) (Measure of Time). If I see a (Color) (Animal) while hiking, I am going to bring it home as a pet! At night we will tell (Number) (Silly Word) stories and roast (Noun) around the campfire!!",
+            "prompts": [
+                "Proper Noun",
+                "Noun",
+                "Adjective",
+                "Verb",
+                "Animal",
+                "Color",
+                "Adverb",
+                "Number",
+                "Measure of Time",
+                "Silly Word"
+            ]
         }
     ]
 }

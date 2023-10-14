@@ -3,8 +3,8 @@ import { View, Text, TextInput, Button, StyleSheet } from 'react-native';
 import MadLibData from './MadLib.json';
 
 const GoToCamp = () => {
-    const zooStory = MadLibData.madLibs[0].camping_story_story;
-    const prompts = MadLibData.madLibs[0].prompts;
+    const campStory = MadLibData.madLibs[1].camping_story;
+    const prompts = MadLibData.madLibs[1].prompts;
 
     const [userInputs, setUserInputs] = useState({});
 
@@ -36,7 +36,7 @@ const GoToCamp = () => {
 
     return (
         <View style={styles.container}>
-            <Text>Welcome to the Zoo!</Text>
+            <Text>Welcome to your Camping trip!</Text>
             {renderPrompts()}
             <Button title="Generate Story" onPress={() => alert(generateStory(), "Your MadLib!")} />
         </View>
