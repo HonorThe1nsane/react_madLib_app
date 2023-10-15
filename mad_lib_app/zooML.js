@@ -12,7 +12,8 @@ const GoToZoo = () => {
         setUserInputs({ ...userInputs, [prompt]: text });
     };
 
-    const renderPrompts = () => {
+    //Creates prompts for user input based on the Json file contents
+    const renderPrompts = () => { 
         return prompts.map((prompt, index) => (
             <View key={index} style={styles.inputContainer}>
                 <Text>{prompt}:</Text>
@@ -25,16 +26,17 @@ const GoToZoo = () => {
         ));
     };
 
+    //Creates the story after replacing the placeholder with the user input
     const generateStory = () => {
         let finalStory = zooStory;
         prompts.forEach((prompt) => {
-            const regex = new RegExp(`\\(${prompt}\\)`, 'g');
-            finalStory = finalStory.replace(regex, userInputs[prompt] || '');
+            const regex = new RegExp(`\\(${prompt}\\)`, 'g'); //Looking for "()" in the JSON string
+            finalStory = finalStory.replace(regex, userInputs[prompt] || '');//Replace the placeholder
         });
         return finalStory;
     };
 
-    return (
+    return ( //Generates the alert message
         <View style={styles.container}>
             <Text>Welcome to the Zoo!</Text>
             {renderPrompts()}

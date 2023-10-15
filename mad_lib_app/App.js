@@ -3,9 +3,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './HomeScreen'; // Import the HomeScreen component
 import PickMadLib from './prompt'; // Import the PickMadLib component
-import GoToZoo from './zooML';
-import GoToCamp from './campML';
-const Stack = createStackNavigator();
+import GoToZoo from './zooML'; //Page for the Zoo Mad Lib
+import GoToCamp from './campML'; //Page for the Camping Mad Lib
+const Stack = createStackNavigator(); // Stack navigation allowing for easy navigation
 
 function App() {
   return (
