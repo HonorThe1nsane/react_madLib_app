@@ -1,7 +1,8 @@
 # Overview
 This is my attempt of creating a simple Mad Lib Application
 
-[Software Demo Video] https://youtu.be/3vk3zJHde7A 
+[Software Demo Video]https://youtu.be/3vk3zJHde7A 
+[GitHub]https://github.com/HonorThe1nsane/react_madLib_app.git 
 
 # Development Environment
 
